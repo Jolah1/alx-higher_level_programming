@@ -91,7 +91,7 @@ class Base:
         Returns:
             If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
-        """
+            """
         filename = str(cls.__name__) + ".json"
         try:
             with open(filename, "r") as jsonfile:
@@ -142,13 +142,11 @@ class Base:
                         for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
-
             return []
 
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares using the turtle module.
-
         Args:
             list_rectangles (list): A list of Rectangle objects to draw.
             list_squares (list): A list of Square objects to draw.
